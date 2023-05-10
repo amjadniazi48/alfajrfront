@@ -17,9 +17,10 @@ const AboutUs = ({ data }) => {
         </div>
         <div className=" w-100 d-flex flex-column">
           <div className=" w-100 mb-3">
-            <p  style={{ textAlign: "justify" ,marginTop:"20px"}}>
-
-              <ReactMarkdown>{data.About.data.attributes.description}</ReactMarkdown>
+            <p style={{ textAlign: "justify", marginTop: "20px" }}>
+              <ReactMarkdown>
+                {data.About.data.attributes.description}
+              </ReactMarkdown>
             </p>
             {/* <img
             src="/uploads/plane.svg"
@@ -66,7 +67,7 @@ export async function getStaticProps({ params }) {
   const aboutusres = await fetch(`${API_URL}/api/about-us?populate=*`);
   const About = await aboutusres.json();
   //fetching Publications
-  console.log("job", About);
+  // console.log("job", About);
   return {
     props: {
       data: {
