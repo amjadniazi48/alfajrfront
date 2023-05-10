@@ -51,7 +51,7 @@ const Videos = () => {
               <div className="col-sm-12">
                 <div className="block-title-6 text-center">
                   <h4 className="h5 border-primary">
-                    <span className="bg-primary text-white">SSDO Videos</span>
+                    <span className="bg-primary text-white">Alfajr Videos</span>
                   </h4>
                 </div>
                 <div className="row " style={{ background: "#E5E5CC" }}>
