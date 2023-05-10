@@ -1,11 +1,11 @@
 import React from "react";
 import { API_URL } from "./../config/index";
 import moment from "moment";
-import Image from 'next/image'
+import Image from "next/image";
 import Link from "next/link";
 
 const Highlights = ({ Highlights }) => {
- // console.log("Highlights", Highlights);
+  // console.log("Highlights", Highlights);
   return (
     <div className="col-md-8">
       <div className="block-area">
@@ -17,15 +17,18 @@ const Highlights = ({ Highlights }) => {
         <div className="border-bottom-last-0 first-pt-0">
           {Highlights.data.map((highlight) => {
             return (
-              <article className="card card-full hover-a py-4" key={highlight.id}>
+              <article
+                className="card card-full hover-a py-4"
+                key={highlight.id}
+              >
                 <div className="row">
                   <div className="col-sm-6 col-md-12 col-lg-6">
                     <div className="">
                       <Image
-                       width={360}
-                       height={202}
+                        width={360}
+                        height={202}
                         className="img-fluid"
-                        src={ highlight.attributes.image.data[0].attributes.url}
+                        src={highlight.attributes.image.data[0].attributes.url}
                         data-src="../../assets/img/360x202/img17.jpg"
                         alt="Image description"
                       />
@@ -34,9 +37,9 @@ const Highlights = ({ Highlights }) => {
                   <div className="col-sm-6 col-md-12 col-lg-6">
                     <div className="card-body pt-3 pt-sm-0 pt-md-3 pt-lg-0">
                       <Link href={`highlights/${highlight.attributes.slug}`}>
-                      <h3 className="card-title h2 h3-sm h2-md">
-                        {highlight.attributes.title}
-                      </h3>
+                        <h3 className="card-title h2 h3-sm h2-md">
+                          {highlight.attributes.title}
+                        </h3>
                       </Link>
                       <div className="card-text mb-2 text-muted small">
                         {/* <span className="d-none d-sm-inline me-1">
@@ -50,8 +53,10 @@ const Highlights = ({ Highlights }) => {
                           )}
                         </time>
                       </div>
-                      <p className="card-text" style={{textAlign:"justify"}}>
-                        {highlight.attributes.description.substring(0, 300).concat("...")}
+                      <p className="card-text" style={{ textAlign: "justify" }}>
+                        {highlight.attributes.description
+                          .substring(0, 300)
+                          .concat("...")}
                       </p>
                     </div>
                   </div>
@@ -59,7 +64,6 @@ const Highlights = ({ Highlights }) => {
               </article>
             );
           })}
-        
         </div>
         <Link href="/highlights">
           <p
