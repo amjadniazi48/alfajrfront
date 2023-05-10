@@ -26,6 +26,7 @@ const AcademicPrograms = ({ Academic_Programs }) => {
               return (
                 <div
                   className="card-body col m-2"
+                  key={program.id}
                   style={{
                     width: "8rem",
                     height: "14rem",
