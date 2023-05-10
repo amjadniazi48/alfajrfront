@@ -18,6 +18,8 @@ import MobileSidebar from "./../components/MobileSidebar";
 import AcademicPrograms from "../components/AcademicPrograms";
 
 export default function Home({ data }) {
+  //console.log(data);
+  //return false;
   return (
     <Layout title="Alfajr Institute">
       <div className="wrapper ">
