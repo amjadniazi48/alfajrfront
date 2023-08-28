@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const AcademicPrograms = ({ Academic_Programs }) => {
-  // console.log("academic-programs", Academic_Programs);
+  console.log("academic-programs", Academic_Programs);
   // const [modalShow, setmodalShow] = useState(false);
 
   return (
