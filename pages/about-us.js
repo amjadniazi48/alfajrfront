@@ -6,7 +6,7 @@ import Layout from "@/components/Layout";
 import ReactMarkdown from "react-markdown";
 const AboutUs = ({ data }) => {
   // console.log("about", data);
-
+  //return false;
   return (
     <Layout title="About Us">
       <div class="container p-4 mt-20">
@@ -28,21 +28,16 @@ const AboutUs = ({ data }) => {
           /> */}
           </div>
           <div className=" w-100 d-flex flex-wrap align-items-center justify-items-center">
-            {data.About.data.attributes.images.data.map((img) => {
-              return (
-                <Image
-                  src={img.attributes.url}
-                  width={400}
-                  height={280}
-                  style={{
-                    marginLeft: "7px",
-                    marginBottom: "20px",
-                  }}
-                  alt="About us Images"
-                  key={img.id}
-                />
-              );
-            })}
+            <Image
+              src={data.About.data.attributes.image?.data.attributes.url}
+              width={400}
+              height={280}
+              style={{
+                marginLeft: "7px",
+                marginBottom: "20px",
+              }}
+              alt="About us Images"
+            />
           </div>
         </div>
         <div
@@ -64,7 +59,7 @@ const AboutUs = ({ data }) => {
 };
 export async function getStaticProps({ params }) {
   //fetching about us page
-  const aboutusres = await fetch(`${API_URL}/api/about-us?populate=*`);
+  const aboutusres = await fetch(`${API_URL}/api/about-us?populate=deep`);
   const About = await aboutusres.json();
   //fetching Publications
   // console.log("job", About);
