@@ -4,7 +4,7 @@ import { API_URL } from "@/config/index";
 import TeamModel from "../../components/TeamModal";
 import Image from "next/image";
 function Team({ data }) {
-  console.log(data);
+  console.log("team", data);
   const [showProfile, setshowProfile] = useState({});
   console.log(showProfile);
   const [modalShow, setmodalShow] = useState(false);
@@ -25,7 +25,7 @@ function Team({ data }) {
                   className="row text-center mt-3 myteam shadow-sm"
                   style={{ padding: "18px", borderRadius: "10px" }}
                 >
-                  {data.Profiles.data.map((profile) => {
+                  {data.Profiles.data?.map((profile) => {
                     //  console.log("Hello",profile.attributes.Profile.sociallinks[0]?.href)
                     return (
                       <div
@@ -97,7 +97,7 @@ export default Team;
 export async function getServerSideProps() {
   //fetching profiles
   const profileres = await fetch(
-    `${API_URL}/api/teams?populate=*&populate[0]=Profile&populate[1]=Profile.image&populate[2]=Profile.sociallinks.iconClass&sort=rank:asc`
+    `${API_URL}/api/teams?populate=deep&sort=rank:asc`
   );
   const Profiles = await profileres.json();
   //fetching profiles

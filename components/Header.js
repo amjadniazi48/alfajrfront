@@ -30,7 +30,7 @@ const Header = () => {
               <Link href="/">
                 <img
                   className="mobile-logo img-fluid d-lg-none mx-auto"
-                  src="/uploads/SSDO_Logo.webp"
+                  src="/uploads/alfajr_logo.jpg"
                   alt="Logo site"
                 />
               </Link>
@@ -143,7 +143,7 @@ const Header = () => {
                   >
                     <Image
                       className="img-fluid"
-                      src="/uploads/logo.png"
+                      src="/uploads/alfajr_logo.jpg"
                       alt="Logo site"
                       width={100}
                       height={100}
