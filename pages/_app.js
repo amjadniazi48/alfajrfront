@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <link rel="shortcut icon" href="/favicon.png" />
+        <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <Script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
