@@ -16,6 +16,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
+        {/* change the favicon.png to favicon.ico */}
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <Script
