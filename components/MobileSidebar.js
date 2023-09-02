@@ -48,7 +48,7 @@ const MobileSidebar = () => {
             <div className="logo-sidenav p-2">
               <Link href="/">
                 <Image
-                  Src="uploads/alfajr_logo.jpg"
+                  Src="/uploads/alfajr_logo.jpg"
                   className="img-fluid"
                   alt="logo"
                   width={150}
