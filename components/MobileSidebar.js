@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
+
 import { API_URL } from "@/config/index";
 const MobileSidebar = () => {
   const [Nav, setNav] = useState([]);
@@ -47,12 +47,12 @@ const MobileSidebar = () => {
           <div className="mobile-content mb-auto">
             <div className="logo-sidenav p-2">
               <Link href="/">
-                <Image
-                  Src="/uploads/alfajr_logo.jpg"
+                <img
+                  src="/uploads/alfajr_logo.jpg"
                   className="img-fluid"
                   alt="logo"
-                  width={150}
-                  height={150}
+                  width="150"
+                  height="152"
                 />
               </Link>
             </div>
