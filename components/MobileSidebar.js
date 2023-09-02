@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-
+import Image from "next/image";
 import { API_URL } from "@/config/index";
 const MobileSidebar = () => {
   const [Nav, setNav] = useState([]);
@@ -47,10 +47,12 @@ const MobileSidebar = () => {
           <div className="mobile-content mb-auto">
             <div className="logo-sidenav p-2">
               <Link href="/">
-                <img
-                  src="uploads/SSDO_Logo.png"
+                <Image
+                  Src="uploads/alfajr_logo.jpg"
                   className="img-fluid"
                   alt="logo"
+                  width={150}
+                  height={150}
                 />
               </Link>
             </div>
@@ -71,7 +73,10 @@ const MobileSidebar = () => {
                             </Link>
                           </li>
                         ) : (
-                          <li className="menu-item menu-item-has-children dropdown mega-dropdown nav-item"  key={nav.id}>
+                          <li
+                            className="menu-item menu-item-has-children dropdown mega-dropdown nav-item"
+                            key={nav.id}
+                          >
                             <Link
                               href={nav.path}
                               className="dropdown-toggle nav-link"
@@ -91,7 +96,10 @@ const MobileSidebar = () => {
                                 {nav.items.map((item) => {
                                   return (
                                     <>
-                                      <li className="menu-item nav-item"  key={item.id}>
+                                      <li
+                                        className="menu-item nav-item"
+                                        key={item.id}
+                                      >
                                         <Link
                                           className="dropdown-item"
                                           href={item.path}
@@ -118,7 +126,7 @@ const MobileSidebar = () => {
 
           <div className="mobile-copyright mt-5 px-4 text-center">
             <p>
-              Copyright <Link href="/">SSDO</Link> - All right reserved
+              Copyright <Link href="/">Alfajr</Link> - All right reserved
             </p>
           </div>
         </nav>
