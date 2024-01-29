@@ -4,8 +4,8 @@ import Image from "next/image";
 import { API_URL } from "@/config/index";
 import Layout from "@/components/Layout";
 const FinancialReports = ({ data }) => {
-  console.log("tax returns",data)
- // return false;
+  console.log("tax returns", data);
+  // return false;
   return (
     <Layout title="Financial Reports">
       <div className="wrapper ">
@@ -16,7 +16,9 @@ const FinancialReports = ({ data }) => {
               <div className="col-md-12 h-auto mt-20 ">
                 <div className="block-title-6 text-center">
                   <h4 className="h5 border-primary">
-                    <span className="bg-primary text-white ">Audit Reports</span>
+                    <span className="bg-primary text-white ">
+                      Audit Reports
+                    </span>
                   </h4>
                 </div>
                 <div className="d-flex justify-space-between flex-row flex-wrap gap-3 h-auto mt-5 mb-3">
@@ -34,8 +36,8 @@ const FinancialReports = ({ data }) => {
                                 width={300}
                                 height={350}
                                 src={
-                                  publication.attributes.Report.cover.data.attributes
-                                    .url
+                                  publication.attributes.Report.cover.data
+                                    .attributes.url
                                 }
                                 alt="Report"
                               />
@@ -65,7 +67,7 @@ const FinancialReports = ({ data }) => {
 export async function getServerSideProps() {
   //fetching pubilcations
   const publicationsres = await fetch(
-    `${API_URL}/api/audit-reports?populate=*&populate[0]=Report&populate[1]=Report.cover&populate[2]=Report.file&sort=rank:asc`
+    `${API_URL}/api/audit-reports?populate=deep&sort=rank:asc`
   );
   const Publications = await publicationsres.json();
   //fetching Publications

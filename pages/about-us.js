@@ -29,7 +29,11 @@ const AboutUs = ({ data }) => {
           </div>
           <div className=" w-100 d-flex flex-wrap align-items-center justify-items-center">
             <Image
-              src={data.About.data.attributes.image?.data.attributes.url}
+              src={
+                data.About.data.attributes.image?.data
+                  ? data.About.data.attributes.image?.data.attributes.url
+                  : ""
+              }
               width={400}
               height={280}
               style={{
@@ -57,18 +61,18 @@ const AboutUs = ({ data }) => {
     </Layout>
   );
 };
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   //fetching about us page
   const aboutusres = await fetch(`${API_URL}/api/about-us?populate=deep`);
   const About = await aboutusres.json();
   //fetching Publications
-  // console.log("job", About);
+  console.log("job", About);
   return {
     props: {
       data: {
         About,
       },
-      revalidate: 10, // In secondss
+      //  revalidate: 10, // In secondss
     },
   };
 }
