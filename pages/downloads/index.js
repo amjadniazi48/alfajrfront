@@ -21,9 +21,9 @@ const HighLights = () => {
       );
       const data = await res.json();
       console.log("hightlights", data);
-    
+
       const total = data && data.meta.pagination.total;
-      
+
       setpageCount(Math.ceil(total / limit));
       // console.log(Math.ceil(total/12));
       setLoading(false);
@@ -55,71 +55,92 @@ const HighLights = () => {
       <div className="wrapper ">
         {/* main content */}
         <main id="content">
-          <table className="table table-striped table-bordered">
-            <thead className="table-light">
-              <tr>
-                <td>Title</td>
-                <td >Download</td>
-                <td >Dated</td>
-              </tr>
-            </thead>
-            <tbody>
-              {loading ? (
-                <tr>
-                  <td>
-                    <Skeleton count={10} height={50} />
-                  </td>
-                  <td>
-                    {" "}
-                    <Skeleton count={10} height={50} />
-                  </td>
-                  <td>
-                    {" "}
-                    <Skeleton count={10} height={50} />
-                  </td>
-                </tr>
-              ) : (
-                items &&
-                items.data?.map((highlight) => {
-                  return (
-                    <tr key={highlight.attributes.id}>
-                      <td>{highlight.attributes.title}</td>
-                      <td> <Link href={ highlight.attributes.downloadfile.data.attributes.url} target="_blank"><button className="btn btn-danger p-2">
-                       
-                        Download File </button></Link>
-                        </td>
-                      <td>
-                        <time dateTime="2019-10-21">
-                          {moment(highlight.attributes.createdAt).format(
-                            "Do MMMM YYYY"
-                          )}
-                        </time>
-                      </td>
+          <div className="container">
+            <div className="row p-4 mt-20">
+              <div className="col-sm-12">
+                <div className="block-title-6 text-center">
+                  <h4 className="h5 border-primary">
+                    <span className="bg-primary text-white">Downloads</span>
+                  </h4>
+                </div>
+                <table className="table table-striped table-bordered">
+                  <thead className="table-light">
+                    <tr>
+                      <td>Title</td>
+                      <td>Download</td>
+                      <td>Dated</td>
                     </tr>
-                  );
-                })
-              )}
-            </tbody>
-          </table>
-          <ReactPaginate
-            previousLabel={"previous"}
-            nextLabel={"next"}
-            breakLabel={"..."}
-            pageCount={pageCount}
-            marginPagesDisplayed={2}
-            pageRangeDisplayed={3}
-            onPageChange={handlePageClick}
-            containerClassName={"pagination justify-content-center"}
-            pageClassName={"page-item"}
-            pageLinkClassName={"page-link"}
-            previousClassName={"page-item"}
-            previousLinkClassName={"page-link"}
-            nextClassName={"page-item"}
-            nextLinkClassName={"page-link"}
-            breakClassName={"page-item"}
-            breakLinkClassName={"page-link"}
-            activeClassName={"active"}
-          />
+                  </thead>
+                  <tbody>
+                    {loading ? (
+                      <tr>
+                        <td>
+                          <Skeleton count={10} height={50} />
+                        </td>
+                        <td>
+                          {" "}
+                          <Skeleton count={10} height={50} />
+                        </td>
+                        <td>
+                          {" "}
+                          <Skeleton count={10} height={50} />
+                        </td>
+                      </tr>
+                    ) : (
+                      items &&
+                      items.data?.map((highlight) => {
+                        return (
+                          <tr key={highlight.attributes.id}>
+                            <td>{highlight.attributes.title}</td>
+                            <td>
+                              {" "}
+                              <Link
+                                href={
+                                  highlight.attributes.downloadfile.data
+                                    .attributes.url
+                                }
+                                target="_blank"
+                              >
+                                <button className="btn btn-danger p-2">
+                                  Download File{" "}
+                                </button>
+                              </Link>
+                            </td>
+                            <td>
+                              <time dateTime="2019-10-21">
+                                {moment(highlight.attributes.createdAt).format(
+                                  "Do MMMM YYYY"
+                                )}
+                              </time>
+                            </td>
+                          </tr>
+                        );
+                      })
+                    )}
+                  </tbody>
+                </table>
+                <ReactPaginate
+                  previousLabel={"previous"}
+                  nextLabel={"next"}
+                  breakLabel={"..."}
+                  pageCount={pageCount}
+                  marginPagesDisplayed={2}
+                  pageRangeDisplayed={3}
+                  onPageChange={handlePageClick}
+                  containerClassName={"pagination justify-content-center"}
+                  pageClassName={"page-item"}
+                  pageLinkClassName={"page-link"}
+                  previousClassName={"page-item"}
+                  previousLinkClassName={"page-link"}
+                  nextClassName={"page-item"}
+                  nextLinkClassName={"page-link"}
+                  breakClassName={"page-item"}
+                  breakLinkClassName={"page-link"}
+                  activeClassName={"active"}
+                />
+              </div>
+            </div>
+          </div>
         </main>
       </div>
     </Layout>
