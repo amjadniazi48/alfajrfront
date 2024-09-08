@@ -66,7 +66,7 @@ export async function getServerSideProps({ params }) {
   const aboutusres = await fetch(`${API_URL}/api/about-us?populate=deep`);
   const About = await aboutusres.json();
   //fetching Publications
-  console.log("job", About);
+ // console.log("job", About);
   return {
     props: {
       data: {

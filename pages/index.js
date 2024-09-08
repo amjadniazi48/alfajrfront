@@ -84,7 +84,7 @@ export default function Home({ data }) {
 
 export async function getServerSideProps() {
   // Fetching upcomings
-  const upcomingsres = await fetch(`${API_URL}/api/upcomings?sort=rank:asc`);
+  const upcomingsres = await fetch(`${API_URL}/api/upcomings?sort=createdAt:desc`);
   const Upcomings = await upcomingsres.json();
 
   //fetching Press Releases
@@ -101,18 +101,18 @@ export async function getServerSideProps() {
 
   //fetching sliderimgs
   const academic_programs_res = await fetch(
-    `${API_URL}/api/academic-programs?populate=*&sort=rank:asc&pagination[limit]=4`
+    `${API_URL}/api/academic-programs?populate=*&sort=createdAt:desc&pagination[limit]=4`
   );
   const Academic_Programs = await academic_programs_res.json();
 
   //fetching Highlights
   const highlightsres = await fetch(
-    `${API_URL}/api/posts?sort=rank:asc&pagination[limit]=4&populate=*`
+    `${API_URL}/api/posts?sort=createdAt:desc&pagination[limit]=4&populate=*`
   );
   const Highlights = await highlightsres.json();
 
   //fetching Gallery
-  const videos_res = await fetch(`${API_URL}/api/videos?sort=rank`);
+  const videos_res = await fetch(`${API_URL}/api/videos?sort=createdAt:desc`);
   const Videos = await videos_res.json();
 
   //Getting thematic areas
