@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const AcademicPrograms = ({ Academic_Programs }) => {
+  let bgColor = "";
   // console.log("academic-programs", Academic_Programs);
   // const [modalShow, setmodalShow] = useState(false);
 
@@ -23,6 +24,20 @@ const AcademicPrograms = ({ Academic_Programs }) => {
         <div className="row">
           {Academic_Programs &&
             Academic_Programs.data.map((program, index) => {
+              {
+                if (program.id == 1) {
+                  bgColor = "green";
+                }
+                if (program.id == 2) {
+                  bgColor = "red";
+                }
+                if (program.id == 3) {
+                  bgColor = "yellow";
+                }
+                if (program.id == 4) {
+                  bgColor = "blue";
+                }
+              }
               return (
                 <div
                   key={program.id}
@@ -30,7 +45,7 @@ const AcademicPrograms = ({ Academic_Programs }) => {
                   style={{
                     width: "8rem",
                     height: "14rem",
-                    backgroundColor: `${program.attributes.BackgroundColor}`,
+                    backgroundColor: `${bgColor}`,
                     justifyContent: "center",
                     borderRadius: "10px",
                   }}
