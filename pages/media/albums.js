@@ -78,7 +78,7 @@ function Photosalbum(props) {
   //===================
   const fetchSlidesForLightBox = async (id) => {
     const res = await fetch(
-      `${API_URL}/api/posts?filters[id][$eq]=${id}&populate=*&sort=rank:asc`
+      `${API_URL}/api/posts?filters[id][$eq]=${id}&populate=*&sort=createdAt:desc`
     );
     const data = await res.json();
     //return false;
@@ -105,7 +105,7 @@ function Photosalbum(props) {
   //========
   const fetchPhotos = async (currentPage) => {
     const res = await fetch(
-      `${API_URL}/api/posts?populate=*&sort=rank:asc&pagination[page]=${currentPage}&pagination[pageSize]=${limit}`
+      `${API_URL}/api/posts?populate=*&sort=createdAt:desc&pagination[page]=${currentPage}&pagination[pageSize]=${limit}`
     );
     const data = await res.json();
     let mydata = new Array();
