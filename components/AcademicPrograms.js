@@ -26,16 +26,16 @@ const AcademicPrograms = ({ Academic_Programs }) => {
             Academic_Programs.data.map((program, index) => {
               {
                 if (program.id == 1) {
-                  bgColor = "green";
+                  bgColor = "MediumSeaGreen";
                 }
                 if (program.id == 2) {
-                  bgColor = "red";
+                  bgColor = "SlateBlue";
                 }
                 if (program.id == 3) {
                   bgColor = "Tomato";
                 }
                 if (program.id == 4) {
-                  bgColor = "blue";
+                  bgColor = "Gray";
                 }
               }
               return (
