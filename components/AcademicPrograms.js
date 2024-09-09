@@ -32,7 +32,7 @@ const AcademicPrograms = ({ Academic_Programs }) => {
                   bgColor = "red";
                 }
                 if (program.id == 3) {
-                  bgColor = "yellow";
+                  bgColor = "Tomato";
                 }
                 if (program.id == 4) {
                   bgColor = "blue";
