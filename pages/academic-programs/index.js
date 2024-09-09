@@ -72,7 +72,7 @@ const AcademicPrograms = ({ data }) => {
 export async function getServerSideProps() {
   //fetching thematic-area
   const academicpres = await fetch(
-    `${API_URL}/api/academic-programs?populate=*&sort=rank:asc`
+    `${API_URL}/api/academic-programs?populate=*&sort=createdAt:desc`
   );
   const AcademicPrograms = await academicpres.json();
   //fetching Publications

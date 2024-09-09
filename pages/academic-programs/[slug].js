@@ -67,7 +67,7 @@ export async function getServerSideProps({ params }) {
 
   //fetching profiles
   const res = await fetch(
-    `${API_URL}/api/academic-programs?populate=*&filters[slug][$eq]=${slug}&sort=rank:asc`
+    `${API_URL}/api/academic-programs?populate=*&filters[slug][$eq]=${slug}&sort=createdAt:desc`
   );
   const AcademicProgram = await res.json();
   //fetching profiles
