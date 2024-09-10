@@ -82,7 +82,7 @@ function ShortCourses(props) {
 
   const fetchPhotos = async (currentPage) => {
     const res = await fetch(
-      `${API_URL}/api/short-courses??populate=*&sort=createAt:desc&pagination[page]=${currentPage}&pagination[pageSize]=${limit}`
+      `${API_URL}/api/short-courses??populate=*&sort=createdAt:desc&pagination[page]=${currentPage}&pagination[pageSize]=${limit}`
     );
     const data = await res.json();
     let mydata = new Array();
