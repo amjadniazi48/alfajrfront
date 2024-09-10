@@ -16,7 +16,7 @@ const HighLights = () => {
     setLoading(true);
     const getHighlights = async () => {
       const res = await fetch(
-        `${API_URL}/api/posts?populate=*&sort=createdAt:asc&pagination[page]=1&pagination[pageSize]=${limit}`
+        `${API_URL}/api/posts?populate=*&sort=createdAt:desc&pagination[page]=1&pagination[pageSize]=${limit}`
         // `https://jsonplaceholder.typicode.com/comments?_page=1&_limit=${limit}`
       );
       const data = await res.json();
