@@ -16,12 +16,15 @@ const VisionM = ({ data }) => {
           </h4>
         </div>
         <div className=" w-100 d-flex flex-column">
-          <div className=" w-100 mb-3">
-            <p style={{ textAlign: "justify", marginTop: "20px" }}>
+        <div
+          className="d-flex flex-column shadow-sm p-3 mb-5 bg-body-tertiary rounded"
+          style={{ background: "#dfdef69c", padding: "15px" }}
+        >
+           
               <ReactMarkdown>
                 {data.VisionM.data.attributes.description}
               </ReactMarkdown>
-            </p>
+          
          
           </div>
       
