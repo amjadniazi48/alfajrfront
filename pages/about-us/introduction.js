@@ -44,19 +44,7 @@ const AboutUs = ({ data }) => {
             />
           </div>
         </div>
-        <div
-          className="d-flex flex-column rounded shadow"
-          style={{ background: "#dfdef69c", padding: "15px" }}
-        >
-          <h1 className="bg-primary p-2 w-25 text-white rounded text-center">
-            Our Mission
-          </h1>
-          <p>{data.About.data.attributes.mission}</p>
-          <h1 className="bg-primary p-2 w-25 text-white rounded text-center">
-            Our Vison
-          </h1>
-          <p>{data.About.data.attributes.vision}</p>
-        </div>
+     
       </div>
     </Layout>
   );
