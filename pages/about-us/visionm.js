@@ -20,12 +20,10 @@ const VisionM = ({ data }) => {
           className="d-flex flex-column shadow-sm p-3 mb-5 bg-body-tertiary rounded"
           style={{ background: "#dfdef69c", padding: "15px" }}
         >
-           
               <ReactMarkdown>
                 {data.VisionM.data.attributes.description}
               </ReactMarkdown>
           
-         
           </div>
       
         </div>
