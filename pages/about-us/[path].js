@@ -84,7 +84,7 @@ export async function getServerSideProps({ params }) {
 
   //fetching profiles
   const profileres = await fetch(
-    `${API_URL}/api/profiles?filters[navType][$eq]=${path}&populate[Profile][populate]=image&sort=rank:asc`
+    `${API_URL}/api/profiles?filters[navType][$eq]=${path}&populate[Profile][populate]=image&sort=createdAt:desc`
   );
   const Profiles = await profileres.json();
   //fetching profiles
