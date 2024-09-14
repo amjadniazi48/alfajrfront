@@ -235,3 +235,6 @@ p {
 .w-50 {
   width: 35% !important;
 }
+.cmessage .w-50{
+  width: 32% !important;
+}

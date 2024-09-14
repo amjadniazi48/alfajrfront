@@ -5,7 +5,7 @@ import Layout from "@/components/Layout";
 
 import ReactMarkdown from "react-markdown";
 const AboutUs = ({ data }) => {
-  // console.log("about", data);
+   console.log("about", data);
   //return false;
   return (
     <Layout title="About Us">
@@ -16,16 +16,16 @@ const AboutUs = ({ data }) => {
           </h4>
         </div>
         <div className="row">
-          <div className="col rounded intro"  style={{ background: "#F8F9FA", padding: "15px", textAlign:"justify" }}>
-            <figure class="figure w-50 float-start m-3">
+          <div className="col rounded cmessage"  style={{ background: "#F8F9FA", padding: "15px", textAlign:"justify" }}>
+            <figure class="figure  w-50 float-start m-2">
               <Image
-                className="pull-left"
+          
                 src={
-                  data.About.data.attributes.image?.data
-                    ? data.About.data.attributes.image?.data.attributes.url
+                  data.About.data.attributes.Messages[0]
+                    ? data.About.data.attributes.Messages[0].image.data[0].attributes.url
                     : ""
                 }
-                width={400}
+                width={325}
                 height={280}
                 style={{
                   marginLeft: "7px",
@@ -35,7 +35,7 @@ const AboutUs = ({ data }) => {
               />
             </figure>
             <ReactMarkdown>
-              {data.About.data.attributes.description}
+              {data.About.data.attributes.Messages[0].description}
             </ReactMarkdown>
           </div>
         </div>
