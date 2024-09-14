@@ -16,7 +16,7 @@ const AboutUs = ({ data }) => {
           </h4>
         </div>
         <div className="row">
-          <div className="col rounded"  style={{ background: "#F8F9FA", padding: "15px" }}>
+          <div className="col rounded intro"  style={{ background: "#F8F9FA", padding: "15px", textAlign:"justify" }}>
             <figure class="figure w-50 float-end m-3">
               <Image
                 className="pull-left"
