@@ -5,6 +5,7 @@ import Layout from "@/components/Layout";
 import ReactMarkdown from "react-markdown";
 
 const AcademicPrograms = ({ data }) => {
+  let bgColor = "";
   console.log("data", data);
   // return false;
 
@@ -19,9 +20,24 @@ const AcademicPrograms = ({ data }) => {
 
         <div class="row mt-5 mb-5 g-2" style={{ justifyContent: "left" }}>
           {data.AcademicPrograms.data.map((cat) => {
-            let bgColor = cat.attributes.BackgroundColor;
+             {
+              if (cat.id == 1) {
+                bgColor = "MediumSeaGreen";
+              }
+              if (cat.id == 2) {
+                bgColor = "SlateBlue";
+              }
+              if (cat.id == 3) {
+                bgColor = "Tomato";
+              }
+              if (cat.id == 4) {
+                bgColor = "Gray";
+              }
+            }
             return (
-              <div class="col mb-3 " key={cat.attributes.id}>
+            
+              <div class="col mb-3 " key={cat.id}>
+                
                 <div
                   className="card  d-flex  rgba-black-strong py-5 px-2 shadow"
                   style={{
