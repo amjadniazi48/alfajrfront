@@ -12,7 +12,7 @@ const AboutUs = ({ data }) => {
       <div className="container p-4 mt-20">
         <div className="block-title-6 text-center">
           <h4 className="h5 border-primary">
-            <span className="bg-primary text-white">Chairman Message</span>
+            <span className="bg-primary text-white">Director Message</span>
           </h4>
         </div>
         <div className="row">
