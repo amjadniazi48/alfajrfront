@@ -18,13 +18,10 @@ const AboutUs = ({ data }) => {
         <div className="row">
           <div
             className="col rounded cmessage"
-            style={{
-              background: "#F8F9FA",
-              padding: "15px",
-              textAlign: "justify",
-            }}
-          >
+            style={{ backgroundColor: "#F7F7F5", border: "1px solid #C2CBCD", textAlign:"justify" }}>
+          
             {data.About  && data.About.data.attributes.Messages[0].image.data!=null ? (
+              <div className="card">
               <figure class="figure  w-50 float-start m-2">
                 <Image
                   src={
@@ -41,6 +38,9 @@ const AboutUs = ({ data }) => {
                   alt="About us Images"
                 />
               </figure>
+              <div className="card-body">
+                </div>
+                </div>
               ) : (
                 <figure class="figure  w-50 float-start m-4"
                 style={{
