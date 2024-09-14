@@ -21,8 +21,8 @@ const AboutUs = ({ data }) => {
             style={{ backgroundColor: "#F7F7F5", border: "1px solid #C2CBCD", textAlign:"justify" }}>
           
             {data.About  && data.About.data.attributes.Messages[0].image.data!=null ? (
-              <div className="card">
-              <figure class="figure  w-50 float-start m-2">
+            
+              <figure class="figure  w-50 float-start mt-3 ml-2 mr-2 mb-2">
                 <Image
                   src={
                     data.About.data.attributes.Messages[0].image
@@ -38,9 +38,8 @@ const AboutUs = ({ data }) => {
                   alt="About us Images"
                 />
               </figure>
-              <div className="card-body">
-                </div>
-                </div>
+           
+                
               ) : (
                 <figure class="figure  w-50 float-start m-4"
                 style={{
