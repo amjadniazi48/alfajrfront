@@ -33,7 +33,7 @@ const Header = () => {
         <div className="container">
           <div className="row">
             <div className="col-12">          
-                <a className="navbar-brand" href="/">
+                <Link className="navbar-brand" href="/" >
                 <Image
                       width={1200}
                       height={213}
@@ -41,7 +41,7 @@ const Header = () => {
                     src="/uploads/alfajrbanner1.jpg"
                     alt="Logo site"
                   />
-                </a>  
+                </Link>
             </div>
           </div>
         </div>
