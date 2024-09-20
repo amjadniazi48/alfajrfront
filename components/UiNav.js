@@ -18,7 +18,7 @@ const UiNav = () => {
   return (
     <div
       id="showbacktop"
-      className="showbacktop full-nav bg-white border-none border-lg-1 border-bottom shadow-b-sm py-0"
+      className="showbacktop full-nav border-none border-lg-1 border-bottom shadow-b-sm py-0"
     >
       <div className="container">
         <nav

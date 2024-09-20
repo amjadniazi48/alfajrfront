@@ -5,10 +5,9 @@ export default function Document() {
     <Html>
       <Head>
       
-        {/* Bootstrap Icons  */}
-      
+        {/* Bootstrap Icons  */}   
       </Head>
-      <body>
+      <body >
         <Main />
         <NextScript />
       </body>

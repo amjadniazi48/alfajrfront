@@ -14,43 +14,43 @@ import MobileSidebar from "./../components/MobileSidebar";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
-      <Head>
-        {/* change the favicon.png to favicon.ico */}
-        <link rel="shortcut icon" href="/favicon.ico" />
-      </Head>
-      <Script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        strategy="lazyOnload"
-        // integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-        crossorigin="anonymous"
-      />
+  <>
+        <Script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+          strategy="lazyOnload"
+          // integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+          crossorigin="anonymous"
+        />
 
-      <Script
-        src="/js/sticky.js"
-        strategy="lazyOnload"
-        type="text/javascript"
-      />
-      <Script
-        src="/js/flickity.js"
-        strategy="lazyOnload"
-        type="text/javascript"
-      />
-      <Script
-        src="/js/lazyload.js"
-        strategy="lazyOnload"
-        type="text/javascript"
-      />
+        <Script
+          src="/js/sticky.js"
+          strategy="lazyOnload"
+          type="text/javascript"
+        />
+        <Script
+          src="/js/flickity.js"
+          strategy="lazyOnload"
+          type="text/javascript"
+        />
+        <Script
+          src="/js/lazyload.js"
+          strategy="lazyOnload"
+          type="text/javascript"
+        />
 
-      <Script src="/js/theme.js" strategy="lazyOnload" type="text/javascript" />
-      <Header suppressHydrationWarning />
-      <MobileSidebar suppressHydrationWarning />
-      {/* <MainNav /> */}
-      <UiNav />
-      <Component {...pageProps} suppressHydrationWarning />
-      {/* <Footer /> */}
-      <Footern suppressHydrationWarning />
-    </>
+        <Script
+          src="/js/theme.js"
+          strategy="lazyOnload"
+          type="text/javascript"
+        />
+        <Header />
+        <MobileSidebar />
+        {/* <MainNav /> */}
+        <UiNav />
+        <Component {...pageProps} />
+        {/* <Footer /> */}
+        <Footern />
+      </>
   );
 }
 

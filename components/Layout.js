@@ -19,7 +19,7 @@ const Layout = ({ children, title, description, keywords, image }) => {
   const { asPath, pathname } = useRouter();
 
   return (
-    <div>
+    <>
       <Head>
         <title>{title}</title>
         <meta
@@ -47,25 +47,12 @@ const Layout = ({ children, title, description, keywords, image }) => {
       </Head>
       <div class="sticky-container">
         <ul class="sticky">
-          <li style={{ marginBottom: "8px" }}>
-            <FacebookShareButton url={`https://alfajr.org.pk${asPath}`}>
-              <FacebookIcon size={50} />
-            </FacebookShareButton>
-          </li>
-          <li style={{ marginBottom: "8px" }}>
-            <TwitterShareButton url={`https://alfajr.org.pk${asPath}`}>
-              <TwitterIcon size={50} />
-            </TwitterShareButton>
-          </li>
-          <li>
-            <LinkedinShareButton url={`https://alfajr.org.pk${asPath}`}>
-              <LinkedinIcon size={50} />
-            </LinkedinShareButton>
-          </li>
+          {/* here the banner will be shown on mobile*/}
         </ul>
       </div>
       {children}
-    </div>
+   </>
+     
   );
 };
 Layout.defaultProps = {

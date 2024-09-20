@@ -14,7 +14,6 @@ const MobileSidebar = () => {
     setNav(Navigation);
   };
   return (
-    <div>
       <div className="mobile-side">
         <div id="back-menu" className="back-menu back-menu-start">
           <span className="hamburger-icon open">
@@ -123,15 +122,9 @@ const MobileSidebar = () => {
               </nav>
             </div>
           </div>
-
-          <div className="mobile-copyright mt-5 px-4 text-center">
-            <p>
-              Copyright <Link href="/">Alfajr</Link> - All right reserved
-            </p>
-          </div>
         </nav>
       </div>
-    </div>
+   
   );
 };
 
