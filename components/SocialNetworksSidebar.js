@@ -70,7 +70,7 @@ const SocialNetworksSidebar = (props) => {
           id="bootnews_custompost-10"
           className="widget widget_categories widget_categories_custom"
         >
-            <FacebookEmbed url="https://www.facebook.com/AlFajarInstitute/"
+            <FacebookEmbed url="https://www.facebook.com/AlFajarInstitute/posts/pfbid09z2wfdGrv3RLg8GWrhSSZ2TnLQyC1d9wr1gMRn51Wgo1UGBKcaQ1Zws59ET4N11Wl"
            
             width={350}
           />
