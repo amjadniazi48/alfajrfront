@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { TwitterTimelineEmbed } from "react-twitter-embed";
+import { FacebookEmbed } from 'react-social-media-embed';
 const SocialNetworksSidebar = (props) => {
   return (
     <aside className="col-md-4 end-sidebar-lg">
@@ -70,10 +70,9 @@ const SocialNetworksSidebar = (props) => {
           id="bootnews_custompost-10"
           className="widget widget_categories widget_categories_custom"
         >
-          <TwitterTimelineEmbed
-            sourceType="profile"
-            screenName="AIFajrInstitute"
-            options={{ height: 830 }}
+            <FacebookEmbed url="https://www.facebook.com/AlFajarInstitute/"
+           
+            width={350}
           />
         </aside>
         {/* <aside className="widget">
