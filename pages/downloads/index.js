@@ -68,7 +68,7 @@ const HighLights = () => {
                     <tr>
                       <td>Title</td>
                       <td>Download</td>
-                      <td>Dated</td>
+                    
                     </tr>
                   </thead>
                   <tbody>
