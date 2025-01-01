@@ -73,7 +73,7 @@ const SocialNetworksSidebar = (props) => {
         >
           <div
             style={{
-              backgroundColor: "#f5f5f5",
+           
               alignContent: "center",
               justifyContent: "center",
               display: "flex",
