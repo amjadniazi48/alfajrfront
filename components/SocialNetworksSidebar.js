@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { FacebookEmbed } from 'react-social-media-embed';
+
+import Image from "next/image";
 const SocialNetworksSidebar = (props) => {
   return (
     <aside className="col-md-4 end-sidebar-lg">
@@ -60,7 +61,7 @@ const SocialNetworksSidebar = (props) => {
         <aside className="widget">
           <div className="block-title-4">
             <h4 className="h5 title-arrow">
-              <span>Media</span>
+              <span>Upcoming Conference</span>
             </h4>
           </div>
         </aside>
@@ -70,10 +71,26 @@ const SocialNetworksSidebar = (props) => {
           id="bootnews_custompost-10"
           className="widget widget_categories widget_categories_custom"
         >
-            <FacebookEmbed url="https://www.facebook.com/AlFajarInstitute/posts/pfbid09z2wfdGrv3RLg8GWrhSSZ2TnLQyC1d9wr1gMRn51Wgo1UGBKcaQ1Zws59ET4N11Wl"
-           
-            width={350}
-          />
+          <div
+            style={{
+              backgroundColor: "#f5f5f5",
+              alignContent: "center",
+              justifyContent: "center",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              padding: "20px",
+            }}
+          >
+            <Link href={"/conference"}>
+            <Image
+              src="https://res.cloudinary.com/dh6yabuea/image/upload/v1735748702/Whats_App_Image_2024_12_31_at_9_06_09_PM_2cb51ff893.jpg"
+              alt="whatsapp"
+              width={400}
+              height={1000}
+            />
+            </Link>
+          </div>
         </aside>
         {/* <aside className="widget">
           <div className="hover-a text-center">

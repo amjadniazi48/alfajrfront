@@ -3,10 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import Image from "next/image";
 const Header = () => {
-  const router = useRouter();
-  const forceReload = () => {
-    router.reload();
-  };
+    
   return (
   
       <header className="header">
