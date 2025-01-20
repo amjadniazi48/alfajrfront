@@ -84,7 +84,7 @@ const SocialNetworksSidebar = (props) => {
           >
             <Link href={"/conference"}>
             <Image
-              src="https://res.cloudinary.com/dh6yabuea/image/upload/v1735872517/Whats_App_Image_2025_01_02_at_9_33_05_PM_19b622e3cf.jpg"
+              src="https://res.cloudinary.com/dh6yabuea/image/upload/v1737394293/conf_1_70a5f4a9ac.jpg"
               alt="whatsapp"
               width={400}
               height={1000}
