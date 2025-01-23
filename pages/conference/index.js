@@ -18,6 +18,18 @@ function conference() {
       width={700} height={1000}/>
 
  </div>
+ <div style={{backgroundColor:'#f5f5f5', alignContent:'center', justifyContent:'center', display:'flex', flexDirection:'column', alignItems:'center', padding:"20px"}}>
+     <Image src="https://res.cloudinary.com/dh6yabuea/image/upload/v1737394293/conf_3_dc81a4b056.jpg" alt="whatsapp"
+      width={700} height={1000}/>
+
+ </div>
+ <div style={{backgroundColor:'#f5f5f5', alignContent:'center', justifyContent:'center', display:'flex', flexDirection:'column', alignItems:'center', padding:"20px"}}>
+     <Image src="https://res.cloudinary.com/dh6yabuea/image/upload/v1737642394/conf_urdu_e60772268b.jpg" alt="whatsapp"
+      width={700} height={1000}/>
+
+ </div>
+
+ 
  </>
   )
 }
