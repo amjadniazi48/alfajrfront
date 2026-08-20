@@ -85,12 +85,12 @@ export default function Home({ data }) {
 
 export async function getServerSideProps() {
   // Fetching upcomings
-  const upcomingsres = await fetch(`${API_URL}/api/upcomings?sort=createdAt:asc`);
+  const upcomingsres = await fetch(`${API_URL}/api/upcomings?sort=createdAt:desc`);
   const Upcomings = await upcomingsres.json();
 
   //fetching Press Releases
   const notification_res = await fetch(
-    `${API_URL}/api/notifications?populate=*&sort=rank:asc&pagination[limit]=5`
+    `${API_URL}/api/notifications?populate=*&sort=rank:desc&pagination[limit]=5`
   );
   const Notifications = await notification_res.json();
 
