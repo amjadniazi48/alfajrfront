@@ -61,7 +61,7 @@ const SocialNetworksSidebar = (props) => {
         <aside className="widget">
           <div className="block-title-4">
             <h4 className="h5 title-arrow">
-              <span>Upcoming Conference</span>
+              <span>Admission</span>
             </h4>
           </div>
         </aside>
@@ -82,7 +82,7 @@ const SocialNetworksSidebar = (props) => {
               padding: "20px",
             }}
           >
-            <Link href={"/conference"}>
+            <Link href={"/"}>
             <Image
               src="https://res.cloudinary.com/dlcgduiez/image/upload/v1787237240/admission1_zasov1.jpg"
               alt="whatsapp"
