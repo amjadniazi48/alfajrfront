@@ -86,8 +86,8 @@ const SocialNetworksSidebar = (props) => {
             <Image
               src="https://res.cloudinary.com/dlcgduiez/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1787236462/admission1_klp6kf.jpg"
               alt="whatsapp"
-              width={500}
-              height={400}
+              width={400}
+              height={500}
             />
             </Link>
           </div>
