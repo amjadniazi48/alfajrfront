@@ -61,7 +61,7 @@ const SocialNetworksSidebar = (props) => {
         <aside className="widget">
           <div className="block-title-4">
             <h4 className="h5 title-arrow">
-              <span>Admission</span>
+              <span>Admissions</span>
             </h4>
           </div>
         </aside>
